@@ -23,6 +23,8 @@ taxonomies = [
 
 [extra]
 
+dark_mode = false
+
 nav = [
   { name = "About", path = "/about/" },
   { name = "Blog", path = "/blog/" }
@@ -41,6 +43,10 @@ author = "John Doe"
 
 footer_about = """
 A simple dev-blog theme created by Bennett. You can follow him on [Github](https://github.com/bennetthardwick) (if you like).
+"""
+
+footer_page = """
+© 2021, all rights reserved
 """
 
 not_found_message = """
