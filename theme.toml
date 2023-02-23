@@ -9,10 +9,7 @@ generate_feed = true
 
 [extra]
 
-nav = [
-  { name = "About", path = "/about/" },
-  { name = "Blog", path = "/blog/" }
-]
+nav = [{ name = "About", path = "/about/" }, { name = "Blog", path = "/blog/" }]
 
 blog_path = "blog"
 
@@ -31,6 +28,6 @@ not_found_message = """
 This is not the page you're looking for... return back to [safety?](/)
 """
 
-[author]
+[extra.author]
 name = "Bennett Hardwick"
 homepage = "https://bennetthardwick.com/"
