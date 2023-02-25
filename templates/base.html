@@ -62,7 +62,6 @@
     {% endif %}
 
     <meta property="og:type" content="website">
-
     <meta name="twitter:card" content="summary">
 
     {% if config.twitter %}
@@ -71,6 +70,7 @@
     {% endif %}
 
     {% if page.extra.thumbnail %}
+      <meta name="twitter:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
       <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
     {% elif page.extra.static_thumbnail %}
       {%if page.extra.static_thumbnail is matching("^http[s]?://") %}
@@ -114,6 +114,12 @@
         {% endif %}
       {% endblock title %}
     </title>
+
+    {% block rss %}
+    
+      <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+            href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
+    {% endblock %}
 
     {% block head %}{% endblock head %}
     {% block styles %}
